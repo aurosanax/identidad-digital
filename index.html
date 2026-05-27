@@ -36,8 +36,16 @@
 
     .top-logo {
       text-align:center;
-      padding:16px 15px 10px;
+      padding:10px 15px 8px;
       background:#ffffff;
+    }
+
+    .brand-logo {
+      display:block;
+      max-width:430px;
+      width:100%;
+      height:auto;
+      margin:0 auto 2px;
     }
 
     .brand-title {
@@ -51,7 +59,7 @@
     .brand-subtitle {
       color:var(--azul);
       font-size:1rem;
-      margin-top:6px;
+      margin-top:0;
       font-weight:600;
     }
 
@@ -158,7 +166,7 @@
     .plan-button {
       display:block;
       text-align:center;
-      margin-top:20px;
+      margin-top:auto;
       padding:14px 20px;
       border-radius:50px;
       font-weight:800;
@@ -254,6 +262,7 @@
       grid-template-columns:repeat(3,1fr);
       gap:24px;
       margin-top:22px;
+      align-items:stretch;
     }
 
     .card,
@@ -266,6 +275,12 @@
       box-shadow:0 6px 18px rgba(0,0,0,0.07);
       transition:all 0.25s ease;
       overflow:hidden;
+    }
+
+    .plan-card {
+      display:flex;
+      flex-direction:column;
+      height:100%;
     }
 
     .card:hover,
@@ -325,6 +340,8 @@
       font-size:0.78rem;
       font-weight:800;
       margin-bottom:10px;
+      width:max-content;
+      max-width:100%;
     }
 
     .featured-plan {
@@ -335,7 +352,8 @@
     .features {
       list-style:none;
       padding:0;
-      margin:18px 0 0;
+      margin:18px 0 22px;
+      flex:1;
     }
 
     .features li {
@@ -461,6 +479,17 @@
     }
 
     @media(max-width:800px) {
+      .brand-logo {
+        max-width:310px;
+        margin-bottom:0;
+      }
+
+      .brand-subtitle {
+        font-size:0.88rem;
+        line-height:1.3;
+        padding:0 8px;
+      }
+
       .brand-title { font-size:1.55rem; }
 
       nav {
@@ -518,6 +547,14 @@
     }
 
     @media(max-width:560px) {
+      .top-logo {
+        padding:8px 12px 7px;
+      }
+
+      .brand-logo {
+        max-width:270px;
+      }
+
       .services-grid,
       .plans-grid,
       .process-grid {
@@ -536,7 +573,7 @@
 <body>
 
 <header id="inicio" class="top-logo">
-  <h1 class="brand-title">Soluciones y Transformación Digital</h1>
+  <img src="logotipo.png" alt="Soluciones y Transformación Digital" class="brand-logo">
   <div class="brand-subtitle">Diseño web, identidad visual y organización digital para negocios</div>
 </header>
 
@@ -914,4 +951,3 @@
 
 </body>
 </html>
-
