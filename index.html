@@ -33,31 +33,57 @@
       color:var(--texto);
       line-height:1.6;
     }
-
- .top-logo {
+/* HEADER NUEVO */
+.top-logo {
   text-align:center;
-  padding:0;
+  padding:18px 15px 14px;
   background:#ffffff;
   position:relative;
 }
-   .brand-logo {
+
+.brand-logo {
   display:block;
-  max-width:520px;
+  max-width:360px;
   width:100%;
   height:auto;
-  margin:0 auto 0;
+  margin:0 auto 8px;
 }
 
-    .brand-title {
-      color:var(--azul-oscuro);
-      font-size:2rem;
-      font-weight:800;
-      margin:0;
-      line-height:1.1;
-    }
-
 .brand-subtitle {
+  display:block;
+  position:static;
+  transform:none;
+  max-width:760px;
+  margin:0 auto;
+  padding:0 12px;
   color:var(--azul);
+  font-size:1rem;
+  font-weight:600;
+  line-height:1.25;
+  text-align:center;
+  background:transparent;
+}
+
+@media(max-width:800px) {
+
+  .top-logo {
+    padding:18px 10px 14px;
+  }
+
+  .brand-logo {
+    max-width:230px;
+    margin:0 auto 8px;
+  }
+
+  .brand-subtitle {
+    max-width:310px;
+    font-size:0.68rem;
+    line-height:1.25;
+    padding:0 10px;
+  }
+
+}
+   color:var(--azul);
   font-size:1rem;
   font-weight:600;
   position:absolute;
