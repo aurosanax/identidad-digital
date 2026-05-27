@@ -34,13 +34,12 @@
       line-height:1.6;
     }
 
-   .top-logo {
+ .top-logo {
   text-align:center;
   padding:0;
   background:#ffffff;
-  
+  position:relative;
 }
-
    .brand-logo {
   display:block;
   max-width:520px;
@@ -60,11 +59,14 @@
 .brand-subtitle {
   color:var(--azul);
   font-size:1rem;
-  margin-top:-15px;
-  margin-bottom:18px;
   font-weight:600;
-  position:relative;
-  z-index:6;
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  top:230px;
+  z-index:20;
+  background:white;
+  padding:0 12px;
 }
    nav {
   background:linear-gradient(90deg,var(--azul-oscuro),var(--azul),var(--azul-claro));
