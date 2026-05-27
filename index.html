@@ -10,7 +10,7 @@
   <meta name="keywords" content="soluciones digitales, transformación digital, diseño web, presencia digital, identidad visual, páginas web, branding visual, WhatsApp Business, Google Maps">
   <meta name="author" content="Soluciones y Transformación Digital">
 
-  <style>
+  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=0X81eQqfAfjIGqNXU7vgHdjzMbBGffS8cCafsycqTekSyOm6oupbdbuOlaHbVy6lWUXUnScAQe5Co0fKf6rg2f1MEnpFnkLURgDyTkvFuQEaQOxOlL2cCHRJFk32VBRGEJ8_egFErk6yPeFCUq42jLLQwSuFhFZxjhm8BW9VL0Dx10RzcAxQfzxLcUsIRU2bWBX5cwGreHx4Ce0EG1Oa-J1sM9IAKjwA7RwRnNClAiRbK7ktnMupzKIxPa9kPgo2l_f-U7AuZN6GLUSKe-zj_w" charset="UTF-8"></script><style>
     :root {
       --azul:#0077b6;
       --azul-claro:#00b4d8;
@@ -33,7 +33,7 @@
       color:var(--texto);
       line-height:1.6;
     }
-/* HEADER NUEVO */
+/* HEADER LIMPIO */
 .top-logo {
   text-align:center;
   padding:18px 15px 14px;
@@ -47,6 +47,14 @@
   width:100%;
   height:auto;
   margin:0 auto 8px;
+}
+
+.brand-title {
+  color:var(--azul-oscuro);
+  font-size:2rem;
+  font-weight:800;
+  margin:0;
+  line-height:1.1;
 }
 
 .brand-subtitle {
@@ -64,46 +72,16 @@
   background:transparent;
 }
 
-@media(max-width:800px) {
-
-  .top-logo {
-    padding:18px 10px 14px;
-  }
-
-  .brand-logo {
-    max-width:230px;
-    margin:0 auto 8px;
-  }
-
-  .brand-subtitle {
-    max-width:310px;
-    font-size:0.68rem;
-    line-height:1.25;
-    padding:0 10px;
-  }
-
-}
-   color:var(--azul);
-  font-size:1rem;
-  font-weight:600;
-  position:absolute;
-  left:50%;
-  transform:translateX(-50%);
-  top:230px;
-  z-index:20;
-  background:white;
-  padding:0 12px;
-}
-   nav {
+nav {
   background:linear-gradient(90deg,var(--azul-oscuro),var(--azul),var(--azul-claro));
   text-align:center;
   padding:12px 5px;
   position:sticky;
   top:0;
-  margin-top:-55px;
-  z-index:5;
+  z-index:100;
+  margin-top:0;
 }
-    nav a {
+nav a {
       color:#fff;
       text-decoration:none;
       margin:0 8px;
@@ -500,7 +478,6 @@
       color:var(--azul-oscuro);
       margin-top:1.5rem;
     }
-
     @media(max-width:980px) {
       .services-grid,
       .plans-grid,
@@ -510,39 +487,33 @@
     }
 
     @media(max-width:800px) {
-      .brand-logo {
-        max-width:310px;
-        margin-bottom:0;
+      .top-logo {
+        padding:18px 10px 14px;
       }
 
-   .brand-subtitle {
-  display:block;
-  position:static;
-  transform:none;
-  width:100%;
-  max-width:260px;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top:-18px;
-  margin-bottom:8px;
-  padding:0 10px;
-  text-align:center;
-  color:var(--azul);
-  font-size:0.58rem;
-  font-weight:600;
-  line-height:1.2;
-  background:transparent;
-}     
-      .brand-title { font-size:1.55rem; }
-nav {
-  background:linear-gradient(90deg,var(--azul-oscuro),var(--azul),var(--azul-claro));
-  text-align:center;
-  padding:12px 5px;
-  position:sticky;
-  top:0;
-  z-index:100;
-  margin-top:0;
-}
+      .brand-logo {
+        max-width:240px;
+        margin:0 auto 8px;
+      }
+
+      .brand-subtitle {
+        max-width:320px;
+        font-size:0.72rem;
+        line-height:1.25;
+        padding:0 10px;
+      }
+
+      nav {
+        display:flex;
+        justify-content:flex-start;
+        align-items:center;
+        flex-wrap:nowrap;
+        gap:3px;
+        padding:10px 8px;
+        overflow-x:auto;
+        scrollbar-width:none;
+        margin-top:0;
+      }
 
       nav::-webkit-scrollbar { display:none; }
 
@@ -588,19 +559,21 @@ nav {
     }
 
     @media(max-width:560px) {
-  .top-logo {
-    padding:14px 10px 10px;
-}
+      .top-logo {
+        padding:16px 10px 14px;
+      }
 
-.brand-logo {
-    max-width:200px;
-}
+      .brand-logo {
+        max-width:230px;
+        margin:0 auto 8px;
+      }
 
-.brand-subtitle {
-    margin-top:6px;
-    font-size:0.70rem;
-    line-height:1.2;
-}
+      .brand-subtitle {
+        max-width:315px;
+        font-size:0.70rem;
+        line-height:1.25;
+        padding:0 10px;
+      }
 
       .services-grid,
       .plans-grid,
@@ -613,12 +586,8 @@ nav {
         width:100%;
         text-align:center;
       }
-      .button {
-    width:100%;
-    text-align:center;
-}
-}
-    } 
+    }
+
   </style>
 </head>
 
@@ -1003,4 +972,3 @@ nav {
 
 </body>
 </html>
-
