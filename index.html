@@ -34,25 +34,27 @@
       line-height:1.6;
     }
 
-    .top-logo {
+    .top-logo{
       text-align:center;
-      padding:16px 15px 10px;
+      padding:10px 15px 0;
       background:#ffffff;
     }
 
-    .brand-title {
-      color:var(--azul-oscuro);
-      font-size:2rem;
-      font-weight:800;
-      margin:0;
-      line-height:1.1;
+    .brand-logo{
+      max-width:520px;
+      width:90%;
+      height:auto;
+      display:block;
+      margin:0 auto 2px;
+      filter:drop-shadow(0 6px 16px rgba(0,119,182,0.10));
     }
 
-    .brand-subtitle {
+    .brand-subtitle{
       color:var(--azul);
       font-size:1rem;
-      margin-top:6px;
+      margin-top:0;
       font-weight:600;
+      letter-spacing:0.2px;
     }
 
     nav {
@@ -461,7 +463,19 @@
     }
 
     @media(max-width:800px) {
-      .brand-title { font-size:1.55rem; }
+      .brand-logo{
+        max-width:280px;
+        width:82%;
+      }
+
+      .top-logo{
+        padding:8px 12px 0;
+      }
+
+      .brand-subtitle{
+        font-size:0.85rem;
+        margin-top:0;
+      }
 
       nav {
         display:flex;
@@ -536,8 +550,13 @@
 <body>
 
 <header id="inicio" class="top-logo">
-  <h1 class="brand-title">Soluciones y Transformación Digital</h1>
-  <div class="brand-subtitle">Diseño web, identidad visual y organización digital para negocios</div>
+  <img src="logotipo.png"
+       alt="Soluciones y Transformación Digital"
+       class="brand-logo">
+
+  <div class="brand-subtitle">
+    Diseño web, identidad visual y organización digital para negocios
+  </div>
 </header>
 
 <nav>
@@ -914,4 +933,3 @@
 
 </body>
 </html>
-
