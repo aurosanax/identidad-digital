@@ -1,1 +1,1106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png?v=1">
+  <link rel="shortcut icon" type="image/png" href="./favicon.png?v=1">
+  <link rel="apple-touch-icon" href="./favicon.png?v=1">
+
+  <title>Presencia Digital Profesional | Diseño Web y Soluciones Digitales</title>
+
+  <meta name="description" content="Servicios de presencia digital profesional, diseño web, branding visual, optimización digital, páginas web modernas, integración WhatsApp, Google Maps y soluciones digitales para negocios y profesionales.">
+  <meta name="keywords" content="presencia digital profesional, diseño web, páginas web, landing page, sitio web profesional, branding digital, identidad visual, WhatsApp Business, Google Maps, diseño para negocios">
+  <meta name="author" content="Presencia Digital Profesional">
+
+  <style>
+    :root {
+      --azul:#0077b6;
+      --azul-claro:#00b4d8;
+      --azul-oscuro:#023e8a;
+      --turquesa-suave:#e9fbff;
+      --borde-azul:#bdeef7;
+      --texto:#333333;
+      --gris:#667085;
+      --whatsapp:#25D366;
+      --whatsapp-oscuro:#128C7E;
+      --dorado:#f4b400;
+    }
+
+    * {
+      box-sizing:border-box;
+    }
+
+    html {
+      scroll-behavior:smooth;
+    }
+
+    body {
+      font-family:Arial, sans-serif;
+      margin:0;
+      background:#ffffff;
+      color:var(--texto);
+      line-height:1.6;
+    }
+
+    .top-logo {
+      text-align:center;
+      padding:10px 15px 6px;
+      background:#ffffff;
+    }
+
+    .brand-text {
+      color:var(--azul-oscuro);
+      font-size:1.85rem;
+      font-weight:800;
+      letter-spacing:0.4px;
+      margin:0;
+      line-height:1.1;
+    }
+
+    .brand-subtitle {
+      color:var(--azul);
+      font-size:0.95rem;
+      font-weight:600;
+      margin-top:4px;
+    }
+
+    nav {
+      background:linear-gradient(90deg,var(--azul-oscuro),var(--azul),var(--azul-claro));
+      text-align:center;
+      padding:12px 5px;
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+
+    nav a {
+      color:#fff;
+      text-decoration:none;
+      margin:0 8px;
+      font-weight:bold;
+      padding:8px 12px;
+      border-radius:22px;
+      display:inline-block;
+      transition:all 0.25s ease;
+      font-size:0.9rem;
+    }
+
+    nav a:hover {
+      background:rgba(255,255,255,0.22);
+      transform:translateY(-1px);
+    }
+
+    .social-bar {
+      background:#f2fcff;
+      padding:16px 10px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:18px;
+      flex-wrap:wrap;
+      border-bottom:1px solid var(--borde-azul);
+    }
+
+    .social-bar a {
+      min-width:120px;
+      min-height:54px;
+      border-radius:50px;
+      background:#ffffff;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      border:2px solid #d9f4fb;
+      box-shadow:0 6px 18px rgba(0,119,182,0.12);
+      transition:all .25s ease;
+      color:var(--azul-oscuro);
+      text-decoration:none;
+      font-weight:700;
+      font-size:0.9rem;
+      gap:8px;
+      padding:0 16px;
+    }
+
+    .social-bar a:hover {
+      transform:translateY(-4px) scale(1.03);
+      box-shadow:0 10px 24px rgba(0,119,182,0.18);
+    }
+
+    .hero {
+      background:
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,0.92) 0%,
+          rgba(255,255,255,0.82) 45%,
+          rgba(233,251,255,0.42) 100%
+        ),
+        radial-gradient(circle at top right, rgba(0,180,216,0.28), transparent 34%),
+        linear-gradient(135deg,#ffffff,#e9fbff);
+      border-bottom:1px solid var(--borde-azul);
+    }
+
+    .hero-content {
+      max-width:1350px;
+      margin:auto;
+      min-height:540px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      align-items:center;
+      gap:30px;
+      padding:40px 50px;
+      overflow:hidden;
+    }
+
+    .hero-text h1 {
+      color:var(--azul-oscuro);
+      font-size:2.75rem;
+      line-height:1.1;
+      margin:0 0 18px;
+      max-width:650px;
+    }
+
+    .hero-text h1 span {
+      color:var(--azul-claro);
+      display:block;
+    }
+
+    .hero-text p {
+      color:#1f3d5a;
+      font-size:1.08rem;
+      max-width:580px;
+      margin-bottom:22px;
+    }
+
+    .hero-buttons {
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    .button {
+      display:inline-block;
+      color:#fff;
+      padding:13px 24px;
+      border-radius:28px;
+      text-decoration:none;
+      font-weight:bold;
+      margin-top:8px;
+      transition:all 0.25s ease;
+      border:none;
+    }
+
+    .button:hover {
+      transform:translateY(-2px);
+    }
+
+    .whatsapp-button {
+      background:linear-gradient(90deg,var(--whatsapp-oscuro),var(--whatsapp));
+      box-shadow:0 5px 14px rgba(37,211,102,0.32);
+    }
+
+    .secondary-button {
+      background:linear-gradient(90deg,var(--azul-oscuro),var(--azul),var(--azul-claro));
+      box-shadow:0 5px 14px rgba(0,119,182,0.25);
+    }
+
+    .hero-visual {
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .dashboard-card {
+      width:100%;
+      max-width:520px;
+      background:#ffffff;
+      border-radius:28px;
+      padding:26px;
+      box-shadow:0 20px 45px rgba(0,62,138,0.17);
+      border:1px solid var(--borde-azul);
+    }
+
+    .dashboard-top {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:20px;
+    }
+
+    .dashboard-title {
+      color:var(--azul-oscuro);
+      font-weight:800;
+      font-size:1.1rem;
+    }
+
+    .dashboard-pill {
+      background:var(--turquesa-suave);
+      color:var(--azul-oscuro);
+      border:1px solid var(--borde-azul);
+      border-radius:50px;
+      padding:6px 12px;
+      font-size:0.8rem;
+      font-weight:700;
+    }
+
+    .mock-browser {
+      border:1px solid #d9f4fb;
+      border-radius:18px;
+      overflow:hidden;
+      background:#f8fdff;
+    }
+
+    .mock-bar {
+      height:38px;
+      background:#ffffff;
+      display:flex;
+      align-items:center;
+      gap:7px;
+      padding:0 14px;
+      border-bottom:1px solid #d9f4fb;
+    }
+
+    .dot {
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:#bdeef7;
+    }
+
+    .mock-content {
+      padding:20px;
+    }
+
+    .mock-line {
+      height:12px;
+      background:#bdeef7;
+      border-radius:20px;
+      margin-bottom:12px;
+    }
+
+    .mock-line.big {
+      height:22px;
+      width:82%;
+      background:linear-gradient(90deg,var(--azul-oscuro),var(--azul-claro));
+    }
+
+    .mock-line.medium {
+      width:64%;
+    }
+
+    .mock-grid {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:10px;
+      margin-top:18px;
+    }
+
+    .mock-card {
+      height:86px;
+      border-radius:14px;
+      background:linear-gradient(180deg,#ffffff,var(--turquesa-suave));
+      border:1px solid #d9f4fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--azul);
+      font-size:1.5rem;
+    }
+
+    main {
+      max-width:1120px;
+      margin:auto;
+      padding:32px 18px;
+    }
+
+    section {
+      margin-bottom:46px;
+    }
+
+    h2 {
+      color:var(--azul-oscuro);
+      border-bottom:2px solid var(--azul);
+      padding-bottom:6px;
+      font-size:1.55rem;
+    }
+
+    .section-title {
+      text-align:center;
+      color:var(--azul-oscuro);
+      font-size:1.45rem;
+      margin-bottom:25px;
+      font-weight:bold;
+    }
+
+    .section-title::before,
+    .section-title::after {
+      content:"";
+      display:inline-block;
+      width:110px;
+      height:1px;
+      background:var(--azul-claro);
+      vertical-align:middle;
+      margin:0 18px;
+    }
+
+    .intro-box {
+      background:linear-gradient(180deg,#ffffff,var(--turquesa-suave));
+      border:1px solid var(--borde-azul);
+      border-radius:18px;
+      padding:24px;
+      box-shadow:0 8px 22px rgba(0,119,182,0.10);
+      text-align:justify;
+    }
+
+    .services-grid,
+    .plans-grid,
+    .integral-grid {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:24px;
+      margin-top:18px;
+    }
+
+    .card,
+    .plan-card,
+    .integral-card {
+      background:#ffffff;
+      border:1px solid #e3f3f8;
+      border-radius:18px;
+      padding:24px 20px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.07);
+      transition:all 0.25s ease;
+      min-height:255px;
+      overflow:hidden;
+    }
+
+    .card:hover,
+    .plan-card:hover,
+    .integral-card:hover {
+      transform:translateY(-4px);
+      box-shadow:0 12px 26px rgba(0,119,182,0.16);
+      border-color:var(--azul-claro);
+    }
+
+    .icon {
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      background:linear-gradient(90deg,var(--azul-oscuro),var(--azul-claro));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-size:1.6rem;
+      margin-bottom:14px;
+    }
+
+    .card h3,
+    .plan-card h3,
+    .integral-card h3 {
+      color:var(--azul-oscuro);
+      margin:4px 0 10px;
+      font-size:1.05rem;
+      text-transform:uppercase;
+    }
+
+    .card p,
+    .integral-card p {
+      font-size:0.92rem;
+      margin:0;
+      color:#334;
+      line-height:1.55;
+      text-align:justify;
+    }
+
+    .price {
+      color:var(--azul);
+      font-size:2rem;
+      font-weight:800;
+      margin:10px 0 8px;
+    }
+
+    .plan-description {
+      color:#334;
+      font-size:0.92rem;
+      line-height:1.5;
+      min-height:52px;
+      text-align:justify;
+    }
+
+    .features {
+      list-style:none;
+      padding:0;
+      margin:18px 0 0;
+    }
+
+    .features li {
+      padding:8px 0;
+      border-bottom:1px solid #eef8fb;
+      font-size:0.9rem;
+      color:#334;
+    }
+
+    .features li::before {
+      content:"✓";
+      color:var(--azul);
+      font-weight:800;
+      margin-right:8px;
+    }
+
+    .featured-plan {
+      border:2px solid var(--azul-claro);
+      box-shadow:0 14px 32px rgba(0,119,182,0.18);
+      position:relative;
+    }
+
+    .tag {
+      display:inline-block;
+      background:var(--turquesa-suave);
+      color:var(--azul-oscuro);
+      border:1px solid var(--borde-azul);
+      border-radius:50px;
+      padding:6px 12px;
+      font-size:0.78rem;
+      font-weight:800;
+      margin-bottom:10px;
+    }
+
+    .notice {
+      background:var(--turquesa-suave);
+      border-left:5px solid var(--azul);
+      padding:1rem;
+      border-radius:8px;
+      margin-top:1.5rem;
+      text-align:justify;
+    }
+
+    .process-grid {
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+      margin-top:24px;
+    }
+
+    .process-card {
+      background:#ffffff;
+      border:1px solid var(--borde-azul);
+      border-radius:18px;
+      padding:20px;
+      text-align:center;
+      box-shadow:0 8px 22px rgba(0,119,182,0.08);
+    }
+
+    .process-number {
+      width:44px;
+      height:44px;
+      border-radius:50%;
+      background:linear-gradient(90deg,var(--azul-oscuro),var(--azul-claro));
+      color:#ffffff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin:0 auto 12px;
+      font-weight:800;
+    }
+
+    .process-card h3 {
+      color:var(--azul-oscuro);
+      font-size:0.98rem;
+      margin:0 0 8px;
+      text-transform:uppercase;
+    }
+
+    .process-card p {
+      margin:0;
+      font-size:0.88rem;
+      color:#334;
+      line-height:1.5;
+    }
+
+    .contact-footer {
+      background:linear-gradient(90deg,var(--azul-oscuro),var(--azul),var(--azul-claro));
+      color:white;
+      padding:30px 18px;
+      margin-top:20px;
+    }
+
+    .contact-footer-grid {
+      max-width:1100px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      gap:18px;
+      align-items:center;
+      text-align:center;
+    }
+
+    .contact-item strong {
+      display:block;
+      font-size:1.05rem;
+    }
+
+    .footer-icon {
+      font-size:2rem;
+      display:block;
+      margin-bottom:6px;
+    }
+
+    .whatsapp-float {
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      background:linear-gradient(90deg,var(--whatsapp-oscuro),var(--whatsapp));
+      color:white;
+      padding:13px 18px;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:bold;
+      box-shadow:0 5px 16px rgba(0,0,0,0.28);
+      z-index:999;
+    }
+
+    .home-float {
+      position:fixed;
+      left:18px;
+      bottom:18px;
+      background:#ffffff;
+      color:var(--azul-oscuro);
+      padding:13px 18px;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:bold;
+      border:1px solid var(--borde-azul);
+      box-shadow:0 5px 16px rgba(0,0,0,0.18);
+      z-index:999;
+    }
+
+    footer {
+      background:#f4f4f4;
+      text-align:center;
+      font-size:0.9rem;
+      padding:2rem 1rem 5rem;
+      color:#555;
+    }
+
+    footer h4 {
+      color:var(--azul-oscuro);
+      margin-top:1.5rem;
+    }
+
+    @media(max-width:980px) {
+      .services-grid,
+      .plans-grid,
+      .integral-grid,
+      .process-grid {
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    @media(max-width:800px) {
+      .brand-text {
+        font-size:1.45rem;
+      }
+
+      nav {
+        display:flex;
+        justify-content:flex-start;
+        align-items:center;
+        flex-wrap:nowrap;
+        gap:3px;
+        padding:10px 8px;
+        overflow-x:auto;
+        scrollbar-width:none;
+      }
+
+      nav::-webkit-scrollbar {
+        display:none;
+      }
+
+      nav a {
+        margin:0;
+        padding:7px 9px;
+        font-size:0.76rem;
+        white-space:nowrap;
+        flex-shrink:0;
+      }
+
+      .social-bar {
+        gap:10px;
+        padding:14px 8px;
+      }
+
+      .social-bar a {
+        min-width:92px;
+        min-height:48px;
+        font-size:0.78rem;
+        padding:0 10px;
+      }
+
+      .hero-content {
+        grid-template-columns:1fr;
+        min-height:auto;
+        padding:32px 18px;
+        text-align:center;
+      }
+
+      .hero-text h1 {
+        font-size:1.85rem;
+        margin:auto auto 14px;
+      }
+
+      .hero-text p {
+        font-size:0.98rem;
+        margin-left:auto;
+        margin-right:auto;
+      }
+
+      .hero-buttons {
+        justify-content:center;
+      }
+
+      .dashboard-card {
+        padding:18px;
+      }
+
+      .section-title::before,
+      .section-title::after {
+        width:42px;
+        margin:0 8px;
+      }
+
+      .whatsapp-float,
+      .home-float {
+        font-size:0.8rem;
+        padding:10px 12px;
+      }
+    }
+
+    @media(max-width:560px) {
+      .services-grid,
+      .plans-grid,
+      .integral-grid,
+      .process-grid {
+        grid-template-columns:1fr;
+        gap:18px;
+      }
+
+      .mock-grid {
+        grid-template-columns:1fr;
+      }
+
+      .mock-card {
+        height:60px;
+      }
+
+      .button {
+        width:100%;
+        text-align:center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header id="inicio" class="top-logo">
+    <h1 class="brand-text">Presencia Digital Profesional</h1>
+    <div class="brand-subtitle">Diseño web, branding visual y soluciones digitales para negocios</div>
+  </header>
+
+  <nav>
+    <a href="#inicio">INICIO</a>
+    <a href="#servicios">SERVICIOS</a>
+    <a href="#planes-web">PLANES WEB</a>
+    <a href="#planes-integrales">PLANES INTEGRALES</a>
+    <a href="#proceso">PROCESO</a>
+    <a href="#contacto">CONTACTO</a>
+  </nav>
+
+  <div class="social-bar">
+    <a href="#planes-web" aria-label="Planes Web"><span>🌐</span> Web</a>
+    <a href="#planes-integrales" aria-label="Planes Integrales"><span>🚀</span> Planes</a>
+    <a href="#servicios" aria-label="Branding"><span>🎨</span> Branding</a>
+    <a href="#contacto" aria-label="WhatsApp"><span>💬</span> WhatsApp</a>
+  </div>
+
+  <section class="hero">
+    <div class="hero-content">
+
+      <div class="hero-text">
+        <h1>
+          Tu negocio necesita una
+          <span>presencia digital profesional</span>
+        </h1>
+
+        <p>
+          Creamos páginas web modernas, rápidas y adaptables, acompañadas de branding visual,
+          organización digital, integración con WhatsApp y soluciones pensadas para mejorar la imagen
+          de profesionales, consultorios, emprendimientos y negocios locales.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="https://wa.me/593999999999?text=Hola,%20deseo%20información%20sobre%20servicios%20de%20presencia%20digital."
+             class="button whatsapp-button">
+            Solicitar información por WhatsApp
+          </a>
+
+          <a href="#planes-web" class="button secondary-button">
+            Ver planes digitales
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="dashboard-card">
+          <div class="dashboard-top">
+            <div class="dashboard-title">Proyecto Digital</div>
+            <div class="dashboard-pill">Online</div>
+          </div>
+
+          <div class="mock-browser">
+            <div class="mock-bar">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+
+            <div class="mock-content">
+              <div class="mock-line big"></div>
+              <div class="mock-line medium"></div>
+              <div class="mock-line"></div>
+
+              <div class="mock-grid">
+                <div class="mock-card">🌐</div>
+                <div class="mock-card">💬</div>
+                <div class="mock-card">📍</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <main>
+
+    <section id="servicios">
+      <h2>Servicios digitales</h2>
+
+      <div class="intro-box">
+        <p>
+          Ofrecemos soluciones digitales orientadas a fortalecer la imagen profesional de negocios,
+          consultorios, marcas personales y emprendimientos. El objetivo es que cada proyecto tenga
+          una presentación moderna, clara, confiable y funcional para facilitar el contacto con clientes
+          mediante canales digitales.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="card">
+          <div class="icon">🌐</div>
+          <h3>Diseño web</h3>
+          <p>Desarrollo de páginas web profesionales tipo One Page o multipágina, adaptables a celulares, tablets y computadoras.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🎨</div>
+          <h3>Branding visual</h3>
+          <p>Organización de identidad visual, paleta de colores, tipografías, logotipo básico y estilo gráfico para presencia digital.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">📍</div>
+          <h3>Optimización digital</h3>
+          <p>Integración de WhatsApp, redes sociales, Google Maps, botón de contacto rápido y estructura visual orientada a conversión.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">📱</div>
+          <h3>Redes sociales</h3>
+          <p>Diseño de publicaciones, historias, material promocional y organización visual inicial para mejorar la imagen digital.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🧠</div>
+          <h3>Asesoría digital</h3>
+          <p>Recomendaciones para mejorar la presentación comercial, comunicación digital, catálogo, WhatsApp Business y presencia online.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">⚙️</div>
+          <h3>Soporte adicional</h3>
+          <p>Actualizaciones, modificaciones, ajustes visuales, integraciones adicionales y mantenimiento básico posterior según necesidad.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="planes-web">
+      <div class="section-title">PLANES WEB</div>
+
+      <div class="plans-grid">
+
+        <div class="plan-card">
+          <span class="tag">Inicio profesional</span>
+          <h3>Plan Start Digital</h3>
+          <div class="price">USD $80</div>
+          <p class="plan-description">Ideal para profesionales y negocios que desean iniciar una presencia digital moderna y profesional.</p>
+
+          <ul class="features">
+            <li>Página web profesional tipo One Page</li>
+            <li>Diseño moderno y adaptable</li>
+            <li>Compatible con celulares y computadoras</li>
+            <li>Integración directa con WhatsApp</li>
+            <li>Integración de redes sociales</li>
+            <li>Optimización móvil</li>
+            <li>SEO básico</li>
+            <li>Publicación online</li>
+            <li>Dominio personalizado por 1 año</li>
+            <li>Hosting básico</li>
+            <li>Diseño visual limpio y profesional</li>
+            <li>Hasta 2 revisiones visuales menores</li>
+            <li>Tiempo estimado: 15 a 30 días laborables</li>
+          </ul>
+        </div>
+
+        <div class="plan-card featured-plan">
+          <span class="tag">Más recomendado</span>
+          <h3>Plan Business Digital</h3>
+          <div class="price">USD $200</div>
+          <p class="plan-description">Ideal para profesionales, consultorios y negocios que desean fortalecer su imagen digital con una estructura más sólida.</p>
+
+          <ul class="features">
+            <li>Todo lo incluido en el Plan Start</li>
+            <li>Diseño visual más personalizado</li>
+            <li>Integración Google Maps interactivo</li>
+            <li>Botón “Cómo llegar con GPS”</li>
+            <li>Testimonios y reseñas visuales</li>
+            <li>Optimización visual avanzada</li>
+            <li>Mayor organización visual del contenido</li>
+            <li>Apoyo visual con imágenes generadas con IA</li>
+            <li>Diseño visual más sólido y profesional</li>
+            <li>Secciones visuales adicionales según el proyecto</li>
+            <li>Hasta 4 revisiones visuales menores</li>
+            <li>Tiempo estimado: 15 a 30 días laborables</li>
+          </ul>
+        </div>
+
+        <div class="plan-card">
+          <span class="tag">Mayor estructura</span>
+          <h3>Plan Pro Digital</h3>
+          <div class="price">USD $350 – $400</div>
+          <p class="plan-description">Ideal para marcas, consultorios y negocios que desean una presencia digital más completa y personalizada.</p>
+
+          <ul class="features">
+            <li>Todo lo incluido en el Plan Business</li>
+            <li>Sitio web multipágina</li>
+            <li>Hasta 5 páginas internas</li>
+            <li>Branding visual mejorado</li>
+            <li>Organización estratégica del contenido</li>
+            <li>SEO ampliado</li>
+            <li>Integraciones adicionales</li>
+            <li>Optimización profesional avanzada</li>
+            <li>Mayor personalización visual</li>
+            <li>Estructura digital más avanzada</li>
+            <li>Hasta 5 revisiones visuales menores</li>
+            <li>Tiempo estimado: 15 a 30 días laborables</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="notice">
+        Los tiempos de entrega pueden variar según la entrega de información, revisiones, aprobaciones y disponibilidad del material proporcionado por el cliente.
+      </div>
+    </section>
+
+    <section id="planes-integrales">
+      <div class="section-title">PLANES INTEGRALES</div>
+
+      <div class="integral-grid">
+
+        <div class="integral-card">
+          <span class="tag">Solución integral</span>
+          <h3>Plan Presencia Digital</h3>
+          <div class="price">Desde USD $200</div>
+          <p>
+            Enfocado en organizar la presencia online del negocio, mejorar su presentación visual,
+            estructurar sus canales digitales y facilitar el contacto con clientes.
+          </p>
+
+          <ul class="features">
+            <li>Revisión general de presencia digital</li>
+            <li>Organización visual inicial</li>
+            <li>Página web comercial básica</li>
+            <li>Integración WhatsApp y redes sociales</li>
+            <li>Recomendaciones de mejora comercial</li>
+            <li>Organización básica para WhatsApp Business</li>
+            <li>Orientación estratégica digital inicial</li>
+          </ul>
+        </div>
+
+        <div class="integral-card featured-plan">
+          <span class="tag">Marca más sólida</span>
+          <h3>Plan Identidad Digital</h3>
+          <div class="price">Desde USD $250</div>
+          <p>
+            Enfocado en construir una imagen visual más coherente, organizada y profesional para
+            negocios que desean mejorar su presentación de marca en internet.
+          </p>
+
+          <ul class="features">
+            <li>Revisión y organización visual de marca</li>
+            <li>Diseño o rediseño básico de logotipo</li>
+            <li>Paleta de colores</li>
+            <li>Tipografías recomendadas</li>
+            <li>Lineamientos básicos de identidad visual</li>
+            <li>Uniformidad estética para redes sociales</li>
+            <li>Adaptación visual alineada a la marca</li>
+          </ul>
+        </div>
+
+        <div class="integral-card">
+          <span class="tag">Mayor alcance visual</span>
+          <h3>Plan Digital Integral</h3>
+          <div class="price">Desde USD $350</div>
+          <p>
+            Combina presencia digital, página web, identidad visual, material promocional y
+            organización comercial inicial para una imagen digital más completa.
+          </p>
+
+          <ul class="features">
+            <li>Página web profesional</li>
+            <li>Organización comercial digital</li>
+            <li>Identidad visual básica</li>
+            <li>Diseño de hasta 4 publicaciones</li>
+            <li>Diseño de hasta 4 historias</li>
+            <li>Hasta 2 videos promocionales básicos</li>
+            <li>Asesoría estratégica digital inicial</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="proceso">
+      <div class="section-title">PROCESO DE TRABAJO</div>
+
+      <div class="process-grid">
+
+        <div class="process-card">
+          <div class="process-number">1</div>
+          <h3>Información</h3>
+          <p>El cliente proporciona datos del negocio, contactos, redes, imágenes, logotipo y material disponible.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-number">2</div>
+          <h3>Organización</h3>
+          <p>Se estructura el contenido, la imagen visual, los servicios y los elementos principales del proyecto.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-number">3</div>
+          <h3>Desarrollo</h3>
+          <p>Se diseña y desarrolla la página o solución digital según el plan contratado y el material aprobado.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-number">4</div>
+          <h3>Entrega</h3>
+          <p>Se realizan ajustes finales, publicación online y entrega del proyecto una vez completado el pago total.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="dominio">
+      <h2>Dominio, renovaciones y accesos</h2>
+
+      <div class="intro-box">
+        <p>
+          El dominio personalizado incluye registro inicial por 1 año. Las tarifas de renovación futuras dependerán de los precios vigentes del proveedor registrador al momento de la renovación.
+        </p>
+
+        <p>
+          Se recomienda asegurar el dominio por varios años para mantener mayor estabilidad y mejores costos futuros, ya que algunas plataformas ofrecen precios promocionales iniciales y posteriormente pueden incrementar sus tarifas de renovación.
+        </p>
+
+        <p>
+          El dominio será registrado a nombre del cliente para garantizar su propiedad y control futuro. El cliente será responsable de conservar sus accesos, correos y datos de recuperación relacionados con el dominio y servicios digitales.
+        </p>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+
+      <div class="intro-box">
+        <p>
+          Para solicitar información, revisar planes o coordinar el desarrollo de una presencia digital profesional, puedes comunicarte directamente por WhatsApp.
+        </p>
+
+        <p>
+          El proyecto puede desarrollarse de manera remota mediante coordinación digital, entrega de información, revisiones y aprobaciones progresivas.
+        </p>
+
+        <a href="https://wa.me/593999999999?text=Hola,%20deseo%20información%20sobre%20los%20planes%20de%20presencia%20digital."
+           class="button whatsapp-button">
+          Enviar mensaje por WhatsApp
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <section class="contact-footer">
+    <div class="contact-footer-grid">
+
+      <div class="contact-item">
+        <span class="footer-icon">🌐</span>
+        <strong>Presencia Digital Profesional</strong>
+        Diseño web y soluciones digitales
+      </div>
+
+      <div class="contact-item">
+        <span class="footer-icon">💬</span>
+        <strong>WhatsApp</strong>
+        Atención y coordinación digital
+      </div>
+
+      <div class="contact-item">
+        <span class="footer-icon">🕘</span>
+        <strong>Modalidad de trabajo</strong>
+        Remota y coordinada digitalmente
+      </div>
+
+    </div>
+  </section>
+
+  <a href="#inicio" class="home-float">Inicio</a>
+
+  <a href="https://wa.me/593999999999?text=Hola,%20deseo%20información%20sobre%20servicios%20de%20presencia%20digital."
+     class="whatsapp-float">
+    WhatsApp
+  </a>
+
+  <footer>
+    <h4>Aviso Legal</h4>
+    <p>Este sitio es informativo y presenta servicios digitales profesionales. Los valores, tiempos y alcances pueden variar según los requerimientos específicos del proyecto.</p>
+
+    <h4>Política de Privacidad</h4>
+    <p>No recopilamos información personal sin consentimiento. Los datos proporcionados por el cliente se utilizan únicamente para coordinación y desarrollo del proyecto solicitado.</p>
+
+    <h4>Consideraciones</h4>
+    <p>Las modificaciones, actualizaciones o trabajos adicionales fuera del alcance inicialmente acordado podrán generar costos adicionales.</p>
+
+    <p>&copy; 2026 Presencia Digital Profesional. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
